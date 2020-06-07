@@ -53,9 +53,13 @@ private MySQLite db;
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
         if(requestCode==1 && resultCode==RESULT_OK)
         {
+
          Bundle extras = data.getExtras();
-         String nowy = (String)extras.get("wpis");
-         target.add(nowy);
+         //String nowy = (String)extras.get("wpis");
+         Animal nowy = (Animal)extras.getSerializable("nowy");
+         this.db.dodaj(nowy);
+       //  target.add(nowy);
+            adapter.changeCursor(db.lista());
          adapter.notifyDataSetChanged();
         }
     }
