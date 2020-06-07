@@ -7,7 +7,7 @@
     tools:context=".DodajWpis">
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -27,6 +27,7 @@
         android:layout_marginStart="149dp"
         android:layout_marginTop="76dp"
         android:layout_marginEnd="175dp"
+        android:onClick="wyslij"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
